@@ -4,6 +4,26 @@
     <title>Henrietta Zarvou | Portfolio |</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta property="og:title" content="Henrietta Zarvou Full Stack Developer Portfolio">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Hey, this is my personal website. You can take a look at my portfolio, download my CV and see how you can contact me!">
+    <meta property="og:image" content="https://haneza.github.io/portfolio/img/portfolio-home.png">
+    <meta property="og:url" content="https://haneza.github.io/portfolio/">
+    <meta name="facebook:card" content="summary_large_image">
+    <meta name="author" content="Henrietta Zarvou">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">  
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+  
+
+   
+    
+ 
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/font-awesome.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
@@ -19,8 +39,8 @@
     <header class="header">
       <div class="container">
         <div class="header-main">
-          <div class="logo">
-            <a href="#home"><img src="img/logo.png" alt=""></a>
+          <div class="logo-box">
+            <a href="#home"><img class="logo"src="img/logo.svg" alt="logo">portfolio</a>
           </div>
 
           <button type="button" class="nav-toggler js-nav-toggler">
@@ -73,7 +93,7 @@
               <img class="project-view" src="img/bonahenna-home.jpg" alt="img" />
             </div>
             <div class="projects-footer">
-              <div class="description-bonahenna">Responsive website for a tattoo artist and graphic designer </div>
+              <div class="description-bonahenna">Built, coded and designed a responsive front-end website for a tattoo artist and graphic designer </div>
               <div class="projects-dev-icons">
                 <i class="devicon-html5-plain"><p>HTML</p></i>
                 <i class="devicon-sass-original"><p>SCSS</p></i>
@@ -114,7 +134,7 @@
               <img class="project-view" src="img/portfolio-home.png" alt="img" />
             </div>
             <div class="projects-footer">
-              <div class="description-portfolio">My own portfolio website</div>
+              <div class="description-portfolio">Built, coded and designed a fully responsive portfolio website to display recent projects</div>
               <div class="projects-dev-icons">
                 <i class="devicon-html5-plain"><p>HTML</p></i>
                 <i class="devicon-css3-plain"><p>CSS</p></i>
@@ -123,6 +143,27 @@
               <div class="projects-buttons">
                 <a target="_blank" href="https://haneza.github.io/portfolio/" class="btn-view" >View</a>
                 <a target="_blank" href="https://github.com/haneza/portfolio" class="btn-view" >Github</a>
+              </div>
+            </div>
+          </div>
+          <div class="projects-item">
+            <div class="projects-header">
+              <h3 data-text="MERN App"><span>MERN App</span></h3>
+            </div>
+            <div class="projects-body">
+              <img class="project-view" src="img/mern-home.png" alt="img" />
+            </div>
+            <div class="projects-footer">
+              <div class="description-mernapp">Registration and login form UI with RESTful API, perform CRUD operations and JWT authentication. Application built with React, Redux, Node.js, Express and MongoDB. </div>
+              <div class="projects-dev-icons">
+                <i class="devicon-nodejs-plain"><p>Node.js</p></i>
+                <i class="devicon-express-original"><p>Express.js</p></i>
+                <i class="devicon-react-original"><p>React</p></i>
+                <i class="devicon-mongodb-plain">MongoDB</i>
+              </div>
+              <div class="projects-buttons">
+                <a target="_blank" href="https://mernapphaneza.herokuapp.com/register" class="btn-view" >View</a>
+                <a target="_blank" href="https://github.com/haneza/mern-app" class="btn-view" >Github</a>
               </div>
             </div>
           </div>
@@ -253,7 +294,7 @@
             <p>
               My name is Henrietta Zarvou, based in Nicosia, Cyprus. <br>
               I am a self-taught full stack developer, who is passionate to design and build beautiful, responsive modern websites and web applications.
-              <br> I am enjoying to code and design. It's a constant learning and challenges to follow up with trends and technologies.
+              <br>I enjoy coding and designing because of the satisfaction I get by overcoming challenges.
               <br> My goal is to create esthetic websites, which are fast, easy to use, built by the best practices and pleasant for the users.
               <br> Interested to work together with creative and ambitious people in the entire web development spectrum, but would like to learn and refining my skills mostly in the front-end development and UI/UX design. 
             </p>
@@ -270,8 +311,9 @@
         </div>
     
           <div class="contact-details">
+            
             <div class="contact-info">
-                 <p>Let's create something together!</p>
+                 <p class="text1">Let's create something together!</p>
               
                <div class="contact-info-item">
                 <i class="fas fa-map-marker-alt"><p>Nicosia, Cyprus</p></i>
@@ -291,7 +333,7 @@
        
             <div class="contact-form">
                 <div class="icon-box">
-                  <img src="img/white-ball.png" alt="icon">
+                  <img class="triangle" src="img/triangle.png" alt="icon">
                 </div>
               <div class="contact-box">
                  <form action="">
@@ -317,13 +359,10 @@
     </section>
 
     <footer class="footer">
-      
-      <div class="footer-bottom">
         <div class="container">
-          <p> @Henrietta Zarvou | All rights reserved 2022</p>
+          <p class="footer-text"> @Henrietta Zarvou | All rights reserved 2022</p>
         </div>
-      </div>
-    </footer>
+     </footer>
 
     <script src="scripts/app.js"></script>
   </body>
