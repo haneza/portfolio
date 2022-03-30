@@ -368,20 +368,13 @@ button {
 }
 
 section.home {
-  background-image: url(../img/bg-home.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
   height: 100vh;
 }
 
 .container-home {
   display: flex;
   flex-direction: column;
+  position: relative;
   width: 100%;
   gap: 20px;
 }
@@ -396,24 +389,37 @@ section.home {
   gap: 10px;
 }
 .home-text h3 {
-  font-size: 48px;
+  font-size: 20px;
   letter-spacing: -0.008em;
   color: #3b4f7dbf;
 }
+
 .home-text h1 {
   font-size: 64px;
 }
 .home-text h4 {
-  font-size: 20px;
+  font-size: 24px;
+  line-height: 36px;
   color: #3b4f7dbf;
 }
 span.home-title {
-  font-size: 50px;
+  font-size: 36px;
 }
 .home-text h1,
 span.home-title {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   color: rgba(59, 79, 125, 0.75);
+}
+.home-img {
+  width: 100%;
+}
+
+.home-image {
+  width: 600px;
+  height: 600px;
+  position: absolute;
+  right: 10%;
+  top: 10%;
 }
 
 .fa:before,
@@ -472,6 +478,7 @@ span.home-title {
   display: flex;
   flex-direction: row;
   margin-left: 100px;
+  margin-top: 20px;
   align-items: center;
   justify-content: space-between;
 }
@@ -482,6 +489,9 @@ span.home-title {
   margin-top: 20px;
 }
 
+.section-projects {
+  height: 100vh;
+}
 .projects-container {
   max-width: 1170px;
   margin: auto;
@@ -561,7 +571,7 @@ span.home-title {
   justify-content: center;
   align-items: center;
   margin-bottom: 10px;
-  gap: 5px;
+  gap: 25px;
   color: white;
 }
 .projects-dev-icons i {
@@ -683,17 +693,6 @@ span.home-title {
   text-decoration-style: dashed;
 }
 
-.about {
-  background-image: url(../img/bg-about.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  background-attachment: fixed;
-  position: relative;
-  z-index: 1;
-  overflow: hidden;
-  /* height: 100vh; */
-}
 .about-details {
   display: flex;
   flex-direction: row;
@@ -791,9 +790,6 @@ span.home-title {
 .contact-info-item {
   margin-left: auto;
   margin-right: auto;
-  /* display: flex;
-  flex-direction: column;
-  padding: 0 100px; */
   gap: 25px;
 }
 .contact-info-item i {
@@ -845,15 +841,7 @@ span.home-title {
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  /* margin-bottom: 40px;
-  margin-left: 100px; */
 }
-/* .contact-form::before,
-.contact-form::after {
-  content: "";
-  position: absolute;
-  transform: rotate(10deg);
-} */
 .contact-form {
   position: relative;
 }
@@ -870,6 +858,7 @@ span.home-title {
   border-radius: 30px;
   box-shadow: 0 0 10px var(--soft-blue);
   width: 400px;
+  width: 100%;
 }
 
 .input-box {
@@ -947,6 +936,22 @@ textarea.input-control {
     top: 0;
     left: 9%;
   }
+  .home-img {
+    position: absolute;
+    top: -5%;
+    right: -20%;
+    margin: 45px 20px;
+  }
+  .home-text {
+    margin-left: 50px;
+  }
+  .home-text h1 {
+    font-size: 60px;
+  }
+  .home-links {
+    margin-top: 0;
+    margin-left: 50px;
+  }
 
   .projects-item {
     grid-column: span 6;
@@ -961,30 +966,55 @@ textarea.input-control {
 @media (max-width: 768px) {
   .header {
     padding: 8px 9px;
+    position: fixed;
+
+    background-color: var(--white-alpha-50);
+    backdrop-filter: blur(15px);
   }
   .container {
     padding: 0 40px;
   }
-  .home-text {
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    margin-left: 50px;
+  .section-home {
+    margin-bottom: 100px;
   }
-  .home-text h3 {
-    font-size: 30px;
+  .home-text {
+    margin-top: 450px;
+    margin-left: 20px;
+    margin-right: 20px;
   }
   .home-text h1 {
-    font-size: 38px;
+    font-size: 45px;
+    margin-left: auto;
+    margin-right: auto;
   }
   span.home-title {
-    font-size: 40px;
+    font-size: 36px;
+    margin-left: auto;
+    margin-right: auto;
   }
+  .home-text h3 {
+    font-size: 28px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px 116px;
+  }
+  .home-img {
+    position: absolute;
+    top: -15%;
+    left: -10%;
+    margin: 54px 52px;
+  }
+
   .home-links {
+    margin-top: 0;
+    position: absolute;
+    bottom: -20%;
+    right: 22%;
+    padding: 20px 20px;
     display: flex;
     flex-direction: row;
-    margin-left: 50px;
   }
+
   .projects-item {
     grid-column: span 12;
   }
@@ -1006,6 +1036,7 @@ textarea.input-control {
   }
   .about-img {
     margin: auto;
+    padding: 20px 55px;
   }
   .about-text {
     margin: auto;
@@ -1018,9 +1049,7 @@ textarea.input-control {
   .contact-container {
     flex-direction: column;
   }
-  .contact-details {
-    flex-direction: column;
-  }
+
   .logo {
     margin: 8px 50px;
   }
@@ -1028,7 +1057,7 @@ textarea.input-control {
     position: absolute;
     right: 0;
     top: 0;
-    width: 40%;
+    width: 100%;
     margin-top: 50px;
     visibility: visible;
     transition: visibility 0s ease 0.5s;
@@ -1039,17 +1068,17 @@ textarea.input-control {
   }
   .nav ul {
     display: block;
+    margin-top: 24px;
   }
   .nav-toggler {
     visibility: visible;
     margin: 8px 50px;
   }
   .nav-toggler {
-    height: 34px;
+    height: 40px;
     width: 40px;
     border: none;
     background-color: transparent;
-    position: fixed;
     right: 5%;
     top: 0;
     color: var(--main-color);
@@ -1097,12 +1126,12 @@ textarea.input-control {
   .nav-toggler.active span::after {
     transform: rotate(-45deg);
   }
-  .nav li {
+  /* .nav li {
     background-color: var(--white-alpha-40);
     text-align: center;
     transform: translateY(20px);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     opacity: 0;
     transition: opacity 0.5s ease, transform 0.5s ease;
     transition-delay: calc(0.05s * var(--item));
@@ -1116,32 +1145,29 @@ textarea.input-control {
   }
   .nav li:last-child {
     border-radius: 0 0 10px 10px;
-  }
+  } */
+
   .nav li {
     background-color: var(--white-alpha-40);
     text-align: center;
     transform: translateY(20px);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     opacity: 0;
     transition: opacity 0.5s ease, transform 0.5s ease;
     transition-delay: calc(0.05s * var(--item));
+    width: 200px;
   }
   .nav.active li {
     opacity: 1;
     transform: translateY(0);
   }
-  .nav li:first-child {
-    border-radius: 10px 10px 0 0;
-  }
-  .nav li:last-child {
-    border-radius: 0 0 10px 10px;
-  }
+
   .nav a {
     display: block;
     padding: 8px 30px;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 20px;
     color: var(--main-color);
     text-transform: capitalize;
     position: relative;
@@ -1168,6 +1194,9 @@ textarea.input-control {
     margin-left: auto;
     margin-right: auto;
   }
+  .text1 {
+    font-size: 22px;
+  }
   .social-links-contact {
     margin-left: auto;
     margin-right: auto;
@@ -1175,7 +1204,11 @@ textarea.input-control {
 }
 @media (max-width: 425px) {
   .header {
+    position: fixed;
     padding: 8px 9px;
+    background-color: var(--white-alpha-50);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
   }
 
   .logo {
@@ -1185,29 +1218,38 @@ textarea.input-control {
   .nav-toggler {
     margin: 8px 15px;
   }
-
-  .home-text {
-    width: 100%;
-    height: 100%;
-    justify-items: center;
-    margin-left: 30px;
+  .nav li {
+    background-color: var(--white-alpha-50);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
   }
-  .home-text h4 {
+  .section-home {
+    margin-bottom: 100px;
+  }
+  .home-text {
+    margin-top: 400px;
+  }
+  .home-text h3 {
     font-size: 18px;
   }
-
-  .home-text h3 {
-    font-size: 30px;
+  .home-img {
+    position: absolute;
+    top: -15%;
+    margin: 45px 20px;
   }
+
   .home-text h1 {
-    font-size: 32px;
+    font-size: 36px;
   }
   span.home-title {
     font-size: 30px;
   }
   .home-links {
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 0;
+    position: absolute;
+    bottom: -30%;
+    right: 22%;
+    padding: 20px 20px;
   }
   .social-links-home {
     width: 100%;
@@ -1238,12 +1280,9 @@ textarea.input-control {
 
   .about-details {
     flex-direction: column;
-    margin-bottom: 80px;
-    padding-bottom: 50px;
   }
   .about-img {
-    width: 300px;
-    height: 300px;
+    width: 100%;
     padding: 15px 15px;
   }
   .row-fact {
@@ -1260,27 +1299,99 @@ textarea.input-control {
     grid-column: span 12;
   }
 }
-@media (max-width: 320px) {
-  .nav-toggler {
-    margin: 8px 8px;
-  }
-  .logo {
-    margin: 8px 20px;
+@media (max-width: 375px) {
+  #home {
+    margin-bottom: 20px;
   }
 
-  .section-home {
-    margin-bottom: 10px;
-  }
   span.home-title {
     font-size: 26px;
   }
   .home-text {
-    margin-left: auto;
-    margin-right: auto;
     padding: 0 20px;
+    margin-top: 365px;
   }
-  .home-text h4 {
+  .home-text h3 {
+    font-size: 16px;
+  }
+  .home-img {
+    position: absolute;
+    top: -15%;
+    margin: 20px 20px;
+  }
+  .home-links {
+    margin-top: 0;
+    position: absolute;
+    bottom: -30%;
+    right: 15%;
+    padding: 20px 20px;
+  }
+  .projects-container {
+    margin: 60px 20px;
+  }
+  .row-fact {
+    gap: 20px;
+  }
+  .contact-info {
+    margin: 20px 20px;
+  }
+}
+@media (max-width: 320px) {
+  .header {
+    position: fixed;
+    background-color: var(--white-alpha-50);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+  }
+  .nav-toggler {
+    margin: 8px 8px;
+  }
+  nav ul {
+    margin-top: 25px;
+  }
+  .nav li {
+    background-color: var(--white-alpha-50);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+  }
+  .logo {
+    margin: 8px 20px;
+  }
+  .section-padding {
+    padding: 0;
+  }
+
+  #home {
+    margin-bottom: 20px;
+  }
+
+  .home-text {
+    padding: 0 20px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .home-text h1 {
+    font-size: 30px;
+  }
+  span.home-title {
+    font-size: 26px;
+  }
+  .home-text h3 {
     font-size: 14px;
+    padding: 0;
+  }
+  .home-img {
+    position: absolute;
+    top: -15%;
+    margin: 20px 45px;
+  }
+  .home-links {
+    display: blocks;
+    margin-top: 0;
+    position: absolute;
+    bottom: -30%;
+    right: 15%;
+    padding: 20px 20px;
   }
   .projects-item {
     max-width: 300px;
@@ -1291,7 +1402,6 @@ textarea.input-control {
     gap: 5px;
   }
   .about-img {
-    display: none;
   }
   .about-text {
     margin-top: 5px;
@@ -1309,7 +1419,7 @@ textarea.input-control {
     font-weight: 600;
   }
   .contact-info p {
-    font-size: 1rem;
+    font-size: 18px;
   }
   .contact-info-item {
     gap: 10px;
